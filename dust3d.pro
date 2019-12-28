@@ -495,6 +495,11 @@ INCLUDEPATH += thirdparty/QuadriFlow/3rd/pcg32
 INCLUDEPATH += thirdparty/QuadriFlow/3rd/pss
 INCLUDEPATH += thirdparty/QuadriFlow/3rd/lemon-1.3.1
 
+win32 {
+#   Fix error LNK2001: unresolved external symbol "struct lemon::Invalid const lemon::INVALID" (?INVALID@lemon@@3UInvalid@1@B)
+	DEFINES += LEMON_ONLY_TEMPLATES
+}
+
 SOURCES += thirdparty/QuadriFlow/src/adjacent-matrix.cpp
 HEADERS += thirdparty/QuadriFlow/src/adjacent-matrix.hpp
 
