@@ -490,7 +490,7 @@ SOURCES += src/main.cpp
 
 HEADERS += src/version.h
 
-INCLUDEPATH += thirdparty/QuadriFlow
+INCLUDEPATH += thirdparty/QuadriFlow/src
 INCLUDEPATH += thirdparty/QuadriFlow/3rd/pcg32
 INCLUDEPATH += thirdparty/QuadriFlow/3rd/pss
 INCLUDEPATH += thirdparty/QuadriFlow/3rd/lemon-1.3.1
