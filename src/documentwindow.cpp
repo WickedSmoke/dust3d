@@ -640,6 +640,7 @@ DocumentWindow::DocumentWindow() :
     //m_editMenu->addAction(m_createWrapPartsAction);
 
     m_alignToMenu = new QMenu(tr("Align To"));
+    m_alignToMenu->setTearOffEnabled(true);
 
     m_alignToLocalCenterAction = new QAction(tr("Local Center"), this);
     connect(m_alignToLocalCenterAction, &QAction::triggered, m_graphicsWidget, &SkeletonGraphicsWidget::alignSelectedToLocalCenter);
