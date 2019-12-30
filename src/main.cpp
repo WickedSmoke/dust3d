@@ -29,6 +29,7 @@ int main(int argc, char ** argv)
     
     // QuantumCD/Qt 5 Dark Fusion Palette
     // https://gist.github.com/QuantumCD/6245215
+#if 1
     qApp->setStyle(QStyleFactory::create("Fusion"));
     QPalette darkPalette;
     darkPalette.setColor(QPalette::Window, Theme::black);
@@ -47,6 +48,7 @@ int main(int argc, char ** argv)
     darkPalette.setColor(QPalette::HighlightedText, Theme::black);    
     qApp->setPalette(darkPalette);
     //qApp->setStyleSheet("QToolTip { color: #ffffff; background-color: #fc6621; border: 1px solid white; }");
+#endif
     
     QCoreApplication::setApplicationName(APP_NAME);
     QCoreApplication::setOrganizationName(APP_COMPANY);

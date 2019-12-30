@@ -131,28 +131,11 @@ void Theme::updateAwesomeMiniButton(QPushButton *button, QChar icon, bool highli
 {
     button->setText(icon);
     QColor color;
-    bool needDesaturation = true;
-    
-    if (highlighted) {
-        if (unnormal) {
-            color = Theme::blue;
-            needDesaturation = false;
-        } else {
-            color = Theme::red;
-        }
-    } else {
-        color = QColor("#525252");
-    }
-    
-    if (needDesaturation) {
-        color = color.toHsv();
-        color.setHsv(color.hue(), color.saturation() / 5, color.value() * 2 / 3);
-        color = color.toRgb();
-    }
-    
-    if (!enabled) {
-        color = QColor(42, 42, 42);
-    }
+
+    if (highlighted)
+        color = unnormal ? Theme::blue : QColor( 0xdc8641 /*0xa8948b*/);
+    else
+        color = QColor(0x484848);
 
     button->setStyleSheet("QPushButton {border: none; background: none; color: " + color.name() + ";}");
 }
