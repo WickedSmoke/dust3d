@@ -1715,7 +1715,7 @@ void DocumentWindow::openExample(const QString &modelName)
             return;
     }
     
-    openPathAs(":/resources/" + modelName, "");
+    openPathAs("resources/" + modelName, "");
 }
 
 void DocumentWindow::open()
